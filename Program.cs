@@ -1,12 +1,15 @@
-﻿
-
-using PokemonSimulator.Pokemons;
-using PokemonSimulator.Pokemons.Enums;
+﻿using PokemonSimulator.ConsoleUI;
+using PokemonSimulator.Enums;
 using PokemonSimulator.Pokemons.PokemonNames;
+using PokemonSimulator.TrainerSimulator;
 
-var flamethrower = new Attack("Flamethrower", ElementType.Fire, 12);
-var ember = new Attack("Ember", ElementType.Fire, 6);
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        TrainerSimlator.RunPokemons();
 
+    }
 
-var charmander = new Charmander(5, new List<Attack> { flamethrower, ember });
-Console.WriteLine(charmander.Name); // Output: Charmander
+   
+}

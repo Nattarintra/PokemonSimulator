@@ -1,4 +1,4 @@
-﻿namespace PokemonSimulator.Pokemons.Enums
+﻿namespace PokemonSimulator.Enums
 {
     public enum ElementType
     {

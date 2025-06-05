@@ -1,4 +1,5 @@
-﻿using PokemonSimulator.Pokemons.AbstractPokemon;
+﻿using PokemonSimulator.Enums;
+using PokemonSimulator.Pokemons.AbstractPokemon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -10,9 +11,9 @@ namespace PokemonSimulator.Pokemons.PokemonSubclasses
     internal class Grass : Pokemon
     {
         public Grass(string name, int level, List<Attack> attacks)
-           : base(name, level, Enums.ElementType.Grass, attacks)
+           : base(name, level, ElementType.Grass, attacks)
         {
-            Type = Enums.ElementType.Grass;
+            Type = ElementType.Grass;
         }
     }
 }

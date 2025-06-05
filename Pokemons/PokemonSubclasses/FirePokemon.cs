@@ -1,4 +1,5 @@
-﻿using PokemonSimulator.Pokemons.AbstractPokemon;
+﻿using PokemonSimulator.Enums;
+using PokemonSimulator.Pokemons.AbstractPokemon;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,9 +20,9 @@ namespace PokemonSimulator.Pokemons.PokemonSubclasses
          * 
          */
         public FirePokemon(string name, int level, List<Attack> attacks)
-            : base(name, level, Enums.ElementType.Fire, attacks)
+            : base(name, level, ElementType.Fire, attacks)
         {
-            Type = Enums.ElementType.Fire; // Set the type of the Pokemon to Fire
+            Type = ElementType.Fire; // Set the type of the Pokemon to Fire
         }
     }
 }

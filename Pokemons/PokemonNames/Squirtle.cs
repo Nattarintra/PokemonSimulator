@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace PokemonSimulator.Pokemons.PokemonNames
 {
-    internal class Squirtle : FirePokemon
+    internal class Squirtle : WaterPokemon
     {
         public Squirtle(int level, List<Attack> attacks) :base("Squirtle", level, attacks) { }
     }
