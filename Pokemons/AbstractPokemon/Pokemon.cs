@@ -1,5 +1,7 @@
-﻿using PokemonSimulator.ConsoleUI;
+﻿using PokemonSimulator.Attacks;
+using PokemonSimulator.ConsoleUI;
 using PokemonSimulator.Enums;
+using PokemonSimulator.Trainer;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,7 +59,30 @@ namespace PokemonSimulator.Pokemons.AbstractPokemon
         }
         public void Attack()
         {
-            Attacks[0].Use(Level); // Use the first attack in the list with the current level
+             for (int i = 0; i < Attacks.Count; i++)
+             {
+                 UI.Print($"{i + 1}. {Attacks[i].Name} (Type: {Attacks[i].Type}, Power: {Attacks[i].BasePower})");
+             }
+
+             UI.Print("Enter the number of the attack you want to use:");
+             string input = UI.GetInput();// Get user input
+             if (int.TryParse(input, out int choice) && choice > 0 && choice <= Attacks.Count)
+            {
+                 // Use the selected attack
+                 /*
+                  * •	User enters 1 → Attacks[0]
+                  * •	User enters 2 → Attacks[1]
+                  */
+                
+                 Attacks[choice - 1].Use(Level); 
+            }
+             else
+             {
+                 UI.Print("Invalid choice. Using the first attack by default.");
+                 Attacks[0].Use(Level); // Use the first attack in the list with the current level
+             }
+           
+
         }
 
         public void RaiseLevel()

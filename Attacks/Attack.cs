@@ -1,11 +1,11 @@
 ﻿using PokemonSimulator.ConsoleUI;
 using PokemonSimulator.Enums;
 
-namespace PokemonSimulator
+namespace PokemonSimulator.Attacks
 {
     public class Attack
     {
-       public string Name { get; }  // ชื่อของท่า
+       public string Name { get; }//Attack name  // ชื่อของท่า
        public  ElementType Type { get; } // ธาตุของท่า
        public int BasePower { get; } // พลังพื้นฐานของท่า
 

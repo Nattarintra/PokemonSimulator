@@ -1,4 +1,5 @@
-﻿using PokemonSimulator.Enums;
+﻿using PokemonSimulator.Attacks;
+using PokemonSimulator.Enums;
 using PokemonSimulator.Pokemons.AbstractPokemon;
 using System;
 using System.Collections.Generic;

@@ -1,4 +1,5 @@
-﻿using PokemonSimulator.Pokemons.PokemonSubclasses;
+﻿using PokemonSimulator.Attacks;
+using PokemonSimulator.Pokemons.PokemonSubclasses;
 using System;
 using System.Collections.Generic;
 using System.Linq;

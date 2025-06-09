@@ -1,4 +1,5 @@
-﻿using PokemonSimulator.Enums;
+﻿using PokemonSimulator.Attacks;
+using PokemonSimulator.Enums;
 using PokemonSimulator.Pokemons.AbstractPokemon;
 using System;
 using System.Collections.Generic;
@@ -12,11 +13,10 @@ namespace PokemonSimulator.Pokemons.PokemonSubclasses
     {
 
         /*
-         * ถ้าให้สรุปสั้น ๆ:
-         *  public FirePokemon(...)	รับค่าตอนสร้าง
-         *  : base(...)	ส่งค่าไปเก็บในคลาสแม่
-         *  Type = ...	ตั้งค่าธาตุให้อัตโนมัติ
-         * 
+         *
+         *  public FirePokemon(...)	Receive values during object creation
+         *  : base(...)	Receive values during object creation
+         *  Type = ...	Automatically set the element type          
          * 
          */
         public FirePokemon(string name, int level, List<Attack> attacks)

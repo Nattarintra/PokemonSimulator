@@ -1,4 +1,5 @@
-﻿using PokemonSimulator.ConsoleUI;
+﻿using PokemonSimulator.Attacks;
+using PokemonSimulator.ConsoleUI;
 using PokemonSimulator.Interfaces;
 using PokemonSimulator.Pokemons.PokemonSubclasses;
 using PokemonSimulator.Pokemons.PokemonTypes;

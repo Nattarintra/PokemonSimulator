@@ -1,4 +1,5 @@
-﻿using PokemonSimulator.Interfaces;
+﻿using PokemonSimulator.Attacks;
+using PokemonSimulator.Interfaces;
 using PokemonSimulator.Pokemons.PokemonSubclasses;
 using System;
 using System.Collections.Generic;
@@ -10,7 +11,9 @@ namespace PokemonSimulator.Pokemons.PokemonNames
 {
     internal class Charmander : FirePokemon
     {
-        public Charmander(int level, List<Attack> attacks) :base("Charmander", level, attacks) { }
+        // Constructor for Charmander that takes level and a list of attacks
+        public Charmander(int level, List<Attack> attacks) :base("Charmander", level, attacks)//
+        { }
        
     }
 }
