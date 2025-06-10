@@ -1,6 +1,7 @@
 ﻿using PokemonSimulator.Attacks;
 using PokemonSimulator.ConsoleUI;
 using PokemonSimulator.Interfaces;
+using PokemonSimulator.Pokemons.AbstractPokemon;
 using PokemonSimulator.Pokemons.PokemonSubclasses;
 using PokemonSimulator.Pokemons.PokemonTypes;
 using System;
@@ -16,15 +17,17 @@ namespace PokemonSimulator.Pokemons.PokemonNames
     {
         public Pikachu(int level, List<Attack> attacks) : base("Pikachu", level, attacks) { }
 
-        public void Evolve()
+        public Pokemon Evolve()
         {
-          
             string currentName = Name;
-            Name = "Raichu"; // Evolved name
-            Level += 10; // Evolve at level 10
-            UI.Print($"Evolving {currentName} to {Name} at level {Level}!");
-           
-
+            var raichu = new Raichu(Level + 10, Attacks);
+            UI.Print($"Evolving {currentName} to {raichu.Name} at level {raichu.Level}!");
+            return raichu; // Return the evolved Pokemon
+          
+        }
+        public override void Speak()
+        {
+            UI.Print("Pika Pika!");
         }
     }
 }

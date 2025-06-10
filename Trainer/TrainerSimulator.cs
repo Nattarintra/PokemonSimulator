@@ -14,7 +14,7 @@ namespace PokemonSimulator.Trainer
     {
         public static void TrainerRun(List<Pokemon> pokemons) 
         {
-
+          
             // Display the list of Pokemons
             foreach (var pokemon in pokemons)
             {

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using PokemonSimulator.Pokemons.AbstractPokemon;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,7 @@ namespace PokemonSimulator.Interfaces
 {
     public interface IEvolvable
     {
-        void Evolve(); // Method to evolve the Pokemon  
+        // return a new pokemon
+        Pokemon Evolve();   
     }
 }

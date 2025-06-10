@@ -21,7 +21,10 @@ namespace PokemonSimulator.Attacks
             var thunderbolt = new Attack("Thunderbolt", ElementType.Electric, 15);
             var spark = new Attack("Spark", ElementType.Electric, 8);
 
-            
+            // Create  a new Legendary attacks
+            var legendaryAttack = new LegendaryAttack(ember);
+            //legendaryAttack.Use(1);
+
             return new List<Pokemon> // Create a list of Pokemon instances
             {
             new Charmander(5, new List<Attack> { flamethrower, ember }),

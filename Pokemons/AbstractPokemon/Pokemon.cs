@@ -91,6 +91,10 @@ namespace PokemonSimulator.Pokemons.AbstractPokemon
             UI.Print($"{Name} has leveled up to level {Level}!");
 
         }
+        
+        public virtual void Speak() { 
+        UI.Print("!!");
+        }
 
     }
 }

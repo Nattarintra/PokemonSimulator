@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PokemonSimulator.Pokemons.PokemonSubclasses
 {
-    internal class FirePokemon : Pokemon
+    internal abstract class FirePokemon : Pokemon
     {
 
         /*

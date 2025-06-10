@@ -15,7 +15,7 @@ namespace PokemonSimulator.Attacks
             Type = type;
             BasePower = basePower;
         }
-        public void Use( int level)
+        public virtual void Use( int level)
         {
             UI.Print($"Using attack: {Name} with base power: {BasePower + level }");
             

@@ -5,7 +5,7 @@ using System.Collections.Generic;
 
 namespace PokemonSimulator.Pokemons.PokemonTypes
 {
-    public class ElectricPokemon : Pokemon
+    public abstract class ElectricPokemon : Pokemon
     {
         public ElectricPokemon(string name, int level, List<Attack> attacks)
             : base(name, level, ElementType.Electric, attacks)

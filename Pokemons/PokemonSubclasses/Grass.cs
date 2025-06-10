@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace PokemonSimulator.Pokemons.PokemonSubclasses
 {
-    internal class Grass : Pokemon
+    internal abstract class Grass : Pokemon
     {
         public Grass(string name, int level, List<Attack> attacks)
            : base(name, level, ElementType.Grass, attacks)
