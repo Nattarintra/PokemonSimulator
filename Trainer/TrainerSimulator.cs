@@ -14,22 +14,18 @@ namespace PokemonSimulator.Trainer
     {
         public static void TrainerRun(List<Pokemon> pokemons) 
         {
-          
-            // Display the list of Pokemons
-            foreach (var pokemon in pokemons)
+            for (int i = 0; i < pokemons.Count; i++)
             {
-                UI.Print($"\n{pokemon.Name} ({pokemon.Type}) - Level {pokemon.Level}");
-               
-                pokemon.RaiseLevel();
-               
+                
+                UI.Print($"\n{pokemons[i].Name} ({pokemons[i].Type}) - Level {pokemons[i].Level}");
 
-                if (pokemon is IEvolvable evolvable)  // Check if the Pokemon can evolve
-                {
-                    evolvable.Evolve();
-                }
-                pokemon.Attack();
+                pokemons[i].Attack();
 
-                UI.Print("\n----------------------------------");
+                var leveled = pokemons[i].RaiseLevel();
+                pokemons[i] = leveled;
+
+                if (pokemons[i] is IEvolvable evo)
+                    pokemons[i] = evo.Evolve();
             }
 
         }

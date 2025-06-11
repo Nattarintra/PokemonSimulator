@@ -81,14 +81,14 @@ namespace PokemonSimulator.Pokemons.AbstractPokemon
                  UI.Print("Invalid choice. Using the first attack by default.");
                  Attacks[0].Use(Level); // Use the first attack in the list with the current level
              }
-           
 
         }
 
-        public void RaiseLevel()
+        public virtual Pokemon RaiseLevel()
         {
             Level++;
             UI.Print($"{Name} has leveled up to level {Level}!");
+            return this; // Return the current instance
 
         }
         
